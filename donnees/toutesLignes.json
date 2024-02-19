@@ -1,0 +1,546 @@
+[
+    {
+        "ligne": "1 – verte",
+        "terminus": [
+            "Honoré-Beaugrand",
+            "Angrignon"
+        ],
+        "stations": [
+            {
+                "Angrignon": [
+                    null,
+                    2
+                ]
+            },
+            {
+                "Monk": [
+                    5,
+                    2
+                ]
+            },
+            {
+                "Jolicoeur": [
+                    5,
+                    2
+                ]
+            },
+            {
+                "Verdun": [
+                    2,
+                    2
+                ]
+            },
+            {
+                "De L'Église": [
+                    2,
+                    2
+                ]
+            },
+            {
+                "LaSalle": [
+                    2,
+                    2
+                ]
+            },
+            {
+                "Charlevoix": [
+                    2,
+                    2
+                ]
+            },
+            {
+                "Lionel-Groulx": [
+                    2,
+                    2
+                ]
+            },
+            {
+                "Atwater": [
+                    2,
+                    2
+                ]
+            },
+            {
+                "Guy-Concordia": [
+                    2,
+                    2
+                ]
+            },
+            {
+                "Peel": [
+                    2,
+                    2
+                ]
+            },
+            {
+                "McGill": [
+                    2,
+                    2
+                ]
+            },
+            {
+                "Place-des-Arts": [
+                    2,
+                    2
+                ]
+            },
+            {
+                "Saint-Laurent": [
+                    2,
+                    2
+                ]
+            },
+            {
+                "Berri-UQAM": [
+                    2,
+                    2
+                ]
+            },
+            {
+                "Beaudry": [
+                    2,
+                    2
+                ]
+            },
+            {
+                "Papineau": [
+                    2,
+                    2
+                ]
+            },
+            {
+                "Frontenac": [
+                    2,
+                    2
+                ]
+            },
+            {
+                "Préfontaine": [
+                    2,
+                    2
+                ]
+            },
+            {
+                "Joliette": [
+                    2,
+                    2
+                ]
+            },
+            {
+                "Pie-IX": [
+                    2,
+                    2
+                ]
+            },
+            {
+                "Viau": [
+                    2,
+                    2
+                ]
+            },
+            {
+                "Assomption": [
+                    2,
+                    2
+                ]
+            },
+            {
+                "Cadillac": [
+                    2,
+                    2
+                ]
+            },
+            {
+                "Langelier": [
+                    2,
+                    2
+                ]
+            },
+            {
+                "Radisson": [
+                    2,
+                    2
+                ]
+            },
+            {
+                "Honore-Beaugrand": [
+                    2,
+                    2
+                ]
+            }
+        ],
+        "couleur": "verte"
+    },
+    {
+        "ligne": "2 – orange",
+        "terminus": [
+            "Montmorency",
+            "Côte-Vertu"
+        ],
+        "stations": [
+            {
+                "Angrignon": [
+                    null,
+                    2
+                ]
+            },
+            {
+                "Monk": [
+                    5,
+                    2
+                ]
+            },
+            {
+                "Jolicoeur": [
+                    5,
+                    2
+                ]
+            },
+            {
+                "Verdun": [
+                    2,
+                    2
+                ]
+            },
+            {
+                "De L'Église": [
+                    2,
+                    2
+                ]
+            },
+            {
+                "LaSalle": [
+                    2,
+                    2
+                ]
+            },
+            {
+                "Charlevoix": [
+                    2,
+                    2
+                ]
+            },
+            {
+                "Lionel-Groulx": [
+                    2,
+                    2
+                ]
+            },
+            {
+                "Atwater": [
+                    2,
+                    2
+                ]
+            },
+            {
+                "Guy-Concordia": [
+                    2,
+                    2
+                ]
+            },
+            {
+                "Peel": [
+                    2,
+                    2
+                ]
+            },
+            {
+                "McGill": [
+                    2,
+                    2
+                ]
+            },
+            {
+                "Place-des-Arts": [
+                    2,
+                    2
+                ]
+            },
+            {
+                "Saint-Laurent": [
+                    2,
+                    2
+                ]
+            },
+            {
+                "Berri-UQAM": [
+                    2,
+                    2
+                ]
+            },
+            {
+                "Beaudry": [
+                    2,
+                    2
+                ]
+            },
+            {
+                "Papineau": [
+                    2,
+                    2
+                ]
+            },
+            {
+                "Frontenac": [
+                    2,
+                    2
+                ]
+            },
+            {
+                "Préfontaine": [
+                    2,
+                    2
+                ]
+            },
+            {
+                "Joliette": [
+                    2,
+                    2
+                ]
+            },
+            {
+                "Pie-IX": [
+                    2,
+                    2
+                ]
+            },
+            {
+                "Viau": [
+                    2,
+                    2
+                ]
+            },
+            {
+                "Assomption": [
+                    2,
+                    2
+                ]
+            },
+            {
+                "Cadillac": [
+                    2,
+                    2
+                ]
+            },
+            {
+                "Langelier": [
+                    2,
+                    2
+                ]
+            },
+            {
+                "Radisson": [
+                    2,
+                    2
+                ]
+            },
+            {
+                "Honore-Beaugrand": [
+                    2,
+                    2
+                ]
+            }
+        ],
+        "couleur": "orange"
+    },
+    {
+        "ligne": "4 – jaune",
+        "terminus": [
+            "Longueuil–UDS",
+            "Berri-UQAM"
+        ],
+        "stations": [
+            {
+                "Berri-UQAM": [
+                    null,
+                    2
+                ]
+            },
+            {
+                "Parc-Jean-Drapeau": [
+                    5,
+                    2
+                ]
+            },
+            {
+                "Longueuil–UDS": [
+                    5,
+                    2
+                ]
+            }
+        ],
+        "couleur": "jaune"
+    },
+    {
+        "ligne": "5 – bleue",
+        "terminus": [
+            "St-Michel",
+            "Snowdon"
+        ],
+        "stations": [
+            {
+                "Angrignon": [
+                    null,
+                    2
+                ]
+            },
+            {
+                "Monk": [
+                    5,
+                    2
+                ]
+            },
+            {
+                "Jolicoeur": [
+                    5,
+                    2
+                ]
+            },
+            {
+                "Verdun": [
+                    2,
+                    2
+                ]
+            },
+            {
+                "De L'Église": [
+                    2,
+                    2
+                ]
+            },
+            {
+                "LaSalle": [
+                    2,
+                    2
+                ]
+            },
+            {
+                "Charlevoix": [
+                    2,
+                    2
+                ]
+            },
+            {
+                "Lionel-Groulx": [
+                    2,
+                    2
+                ]
+            },
+            {
+                "Atwater": [
+                    2,
+                    2
+                ]
+            },
+            {
+                "Guy-Concordia": [
+                    2,
+                    2
+                ]
+            },
+            {
+                "Peel": [
+                    2,
+                    2
+                ]
+            },
+            {
+                "McGill": [
+                    2,
+                    2
+                ]
+            },
+            {
+                "Place-des-Arts": [
+                    2,
+                    2
+                ]
+            },
+            {
+                "Saint-Laurent": [
+                    2,
+                    2
+                ]
+            },
+            {
+                "Berri-UQAM": [
+                    2,
+                    2
+                ]
+            },
+            {
+                "Beaudry": [
+                    2,
+                    2
+                ]
+            },
+            {
+                "Papineau": [
+                    2,
+                    2
+                ]
+            },
+            {
+                "Frontenac": [
+                    2,
+                    2
+                ]
+            },
+            {
+                "Préfontaine": [
+                    2,
+                    2
+                ]
+            },
+            {
+                "Joliette": [
+                    2,
+                    2
+                ]
+            },
+            {
+                "Pie-IX": [
+                    2,
+                    2
+                ]
+            },
+            {
+                "Viau": [
+                    2,
+                    2
+                ]
+            },
+            {
+                "Assomption": [
+                    2,
+                    2
+                ]
+            },
+            {
+                "Cadillac": [
+                    2,
+                    2
+                ]
+            },
+            {
+                "Langelier": [
+                    2,
+                    2
+                ]
+            },
+            {
+                "Radisson": [
+                    2,
+                    2
+                ]
+            },
+            {
+                "Honore-Beaugrand": [
+                    2,
+                    2
+                ]
+            }
+        ],
+        "couleur": "bleue"
+    }
+]
