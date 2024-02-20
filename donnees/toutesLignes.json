@@ -9,163 +9,217 @@
             {
                 "Angrignon": [
                     null,
-                    2
+                    6
                 ]
             },
             {
                 "Monk": [
                     5,
-                    2
+                    5
                 ]
             },
             {
                 "Jolicoeur": [
                     5,
-                    2
+                    5
                 ]
             },
             {
                 "Verdun": [
-                    2,
-                    2
+                    "4 ou 5",
+                    "7 à 9"
                 ]
             },
             {
                 "De L'Église": [
-                    2,
-                    2
+                    [
+                        {
+                            "sortie": "de l'Église",
+                            "voiture": 4
+                        },
+                        {
+                            "sortie": "Wellington",
+                            "voiture": 9
+                        }
+                    ],
+                    [
+                        {
+                            "sortie": "Wellington",
+                            "voiture": 1
+                        },
+                        {
+                            "sortie": "de l'Église",
+                            "voiture": 6
+                        }
+                    ]
                 ]
             },
             {
                 "LaSalle": [
-                    2,
-                    2
+                    6,
+                    "2 ou 4"
                 ]
             },
             {
                 "Charlevoix": [
-                    2,
-                    2
+                    3,
+                    7
                 ]
             },
             {
                 "Lionel-Groulx": [
-                    2,
+                    8,
                     2
                 ]
             },
             {
                 "Atwater": [
-                    2,
-                    2
+                    "2 ou 6",
+                    "4 ou 8"
                 ]
             },
             {
                 "Guy-Concordia": [
-                    2,
-                    2
+                    [
+                        {
+                            "sortie": "Guy",
+                            "voiture": 1
+                        },
+                        {
+                            "sortie": "St-Mathieu",
+                            "voiture": 9
+                        }
+                    ],
+                    [
+                        {
+                            "sortie": "St-Mathieu",
+                            "voiture": 1
+                        },
+                        {
+                            "sortie": "Guy",
+                            "voiture": 9
+                        }
+                    ]
                 ]
             },
             {
                 "Peel": [
-                    2,
-                    2
+                    "4 à 7",
+                    "3 à 6"
                 ]
             },
             {
                 "McGill": [
-                    2,
-                    2
+                    "2 ou 6",
+                    "4 ou 8"
                 ]
             },
             {
                 "Place-des-Arts": [
-                    2,
-                    2
+                    [
+                        {
+                            "sortie": "Jeanne-Mance et Président-Kennedy",
+                            "voiture": 3
+                        },
+                        {
+                            "sortie": "de Bleury",
+                            "voiture": 9
+                        }
+                    ],
+                    [
+                        {
+                            "sortie": "de Bleury",
+                            "voiture": 1
+                        },
+                        {
+                            "sortie": "Jeanne-Mance et Président-Kennedy",
+                            "voiture": 7
+                        }
+                    ]
                 ]
             },
             {
                 "Saint-Laurent": [
-                    2,
-                    2
+                    "6 ou 8",
+                    "2 ou 4"
                 ]
             },
             {
                 "Berri-UQAM": [
-                    2,
-                    2
+                    "à venir",
+                    "à venir"
                 ]
             },
             {
                 "Beaudry": [
-                    2,
-                    2
+                    "2 ou 4",
+                    "6 ou 8"
                 ]
             },
             {
                 "Papineau": [
-                    2,
-                    2
+                    "4 ou 6",
+                    "4 ou 6"
                 ]
             },
             {
                 "Frontenac": [
-                    2,
-                    2
+                    7,
+                    3
                 ]
             },
             {
                 "Préfontaine": [
-                    2,
-                    2
+                    7,
+                    3
                 ]
             },
             {
                 "Joliette": [
-                    2,
-                    2
+                    3,
+                    7
                 ]
             },
             {
                 "Pie-IX": [
-                    2,
-                    2
+                    "4 ou 7",
+                    "4 ou 5"
                 ]
             },
             {
                 "Viau": [
                     2,
-                    2
+                    8
                 ]
             },
             {
                 "Assomption": [
-                    2,
-                    2
+                    "7 ou 8",
+                    "2 ou 4"
                 ]
             },
             {
                 "Cadillac": [
-                    2,
-                    2
+                    "2 ou 4",
+                    "6 ou 8"
                 ]
             },
             {
                 "Langelier": [
-                    2,
-                    2
+                    "5 ou 7",
+                    "3 ou 5"
                 ]
             },
             {
                 "Radisson": [
-                    2,
-                    2
+                    "2 ou 4",
+                    "6 ou 8"
                 ]
             },
             {
-                "Honore-Beaugrand": [
-                    2,
-                    2
+                "Honoré-Beaugrand": [
+                    4,
+                    null
                 ]
             }
         ],

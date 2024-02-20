@@ -6,6 +6,7 @@ const MetroContexteProvider = ({ children }) => {
 
     const [ligneChoisie, setLigneChoisie] = useState();
     const [direction, setDirection] = useState();
+    const [envers, setEnvers] = useState(false);
     const [destination, setDestination] = useState();
 
     return (
@@ -15,6 +16,8 @@ const MetroContexteProvider = ({ children }) => {
                 setLigneChoisie,
                 direction,
                 setDirection,
+                envers,
+                setEnvers,
                 destination,
                 setDestination
             }}

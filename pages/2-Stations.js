@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, useState, useEffect } from 'react';
 import { StyleSheet, ScrollView, Text, View, TouchableOpacity } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -9,20 +9,32 @@ import { MetroContexte } from '../metroContexte';
 
 export default function Stations({ navigation }) {
 
-    const { ligneChoisie, direction, setDirection } = useContext(MetroContexte);
-    
+    const { ligneChoisie, direction, envers, setEnvers, setDestination } = useContext(MetroContexte);
+
+    useEffect(() => {
+        if (direction === donneesLigne.terminus[1]) {
+            setEnvers(true);
+        } else {
+            setEnvers(false);
+        }
+    }, [])
+
     const donneesLigne = toutesLignes.find(ligne => ligne.ligne === ligneChoisie);
 
     const toutesStations = [];
-
     donneesLigne.stations.forEach(station => {
-    // Extraire la clé (nom de la station) de l'objet "station"
         let nomStation = Object.keys(station)[0];
-    // Ajouter le nom de la station au tableau
-    toutesStations.push(nomStation);
+        toutesStations.push(nomStation);
     });
+
+    if (envers) toutesStations.reverse();
+
+    const versPortes = (debarquer) => {
+        console.log(debarquer);
+        setDestination(debarquer);
+        navigation.navigate("Portes")
+    }
     
-    console.log(donneesLigne.couleur);
     return (
         <ScrollView>
             <View style={styles.container}>
@@ -30,7 +42,11 @@ export default function Stations({ navigation }) {
                 {
                     toutesStations.map((item, index) => {
                         return (
-                            <TouchableOpacity key={index} style={styles.bouton}>
+                            <TouchableOpacity
+                                key={index}
+                                onPress={() => versPortes(item)}
+                                style={[styles.bouton, index === 0 && styles.inactif]}
+                            >
                                 <Text>{item}</Text>
                             </TouchableOpacity>
                         )
@@ -74,5 +90,9 @@ const styles = StyleSheet.create({
         backgroundColor: "#0083C9",
         color: "white",
         textAlign: "center"
+    },
+    inactif: {
+        // backgroundColor: 'gray',
+        opacity: 0.5
     }
 });

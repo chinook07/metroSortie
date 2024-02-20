@@ -10,9 +10,9 @@ import { MetroContexte } from '../metroContexte';
 
 export default function Lignes({ navigation }) {
     
-    const { ligneChoisie, setLigneChoisie, direction, setDirection } = useContext(MetroContexte);
+    const { setLigneChoisie, direction, setDirection } = useContext(MetroContexte);
 
-    console.log(direction);
+    console.log("direction", direction);
 
     const versPage2 = (ligne, terminus) => {
         console.log(ligne.ligne);

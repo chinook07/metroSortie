@@ -3,9 +3,9 @@ import { StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-import Lignes from "./pages/Lignes";
-import Stations from "./pages/Stations";
-import Portes from "./pages/Portes";
+import Lignes from "./pages/1-Lignes";
+import Stations from "./pages/2-Stations";
+import Portes from "./pages/3-Portes";
 import Provider from "./metroContexte";
 
 const Stack = createNativeStackNavigator();
