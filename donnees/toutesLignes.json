@@ -233,165 +233,243 @@
         ],
         "stations": [
             {
-                "Angrignon": [
+                "Côte-Vertu": [
                     null,
-                    2
+                    4
                 ]
             },
             {
-                "Monk": [
-                    5,
-                    2
+                "Du Collège": [
+                    [
+                        {
+                            "sortie": "Cartier",
+                            "voiture": 1
+                        },
+                        {
+                            "sortie": "du Collège",
+                            "voiture": 9
+                        }
+                    ],
+                    [
+                        {
+                            "sortie": "du Collège",
+                            "voiture": 1
+                        },
+                        {
+                            "sortie": "Cartier",
+                            "voiture": 9
+                        }
+                    ]
                 ]
             },
             {
-                "Jolicoeur": [
-                    5,
-                    2
+                "De La Savane": [
+                    9,
+                    1
                 ]
             },
             {
-                "Verdun": [
+                "Namur": [
+                    9,
+                    1
+                ]
+            },
+            {
+                "Plamondon": [
+                    [
+                        {
+                            "sortie": "Van Horne",
+                            "voiture": 1
+                        },
+                        {
+                            "sortie": "Plamondon",
+                            "voiture": 9
+                        }
+                    ],
+                    [
+                        {
+                            "sortie": "Plamondon",
+                            "voiture": 1
+                        },
+                        {
+                            "sortie": "Van Horne",
+                            "voiture": 9
+                        }
+                    ]
+                ]
+            },
+            {
+                "Côte-Sainte-Catherine": [
+                    "5 ou 6",
+                    "4 ou 5"
+                ]
+            },
+            {
+                "Snowdon": [
                     2,
-                    2
+                    8
                 ]
             },
             {
-                "De L'Église": [
-                    2,
-                    2
+                "Villa-Maria": [
+                    1,
+                    9
                 ]
             },
             {
-                "LaSalle": [
-                    2,
-                    2
+                "Vendôme": [
+                    6,
+                    4
                 ]
             },
             {
-                "Charlevoix": [
-                    2,
-                    2
+                "Place-Saint-Henri": [
+                    6,
+                    4
                 ]
             },
             {
                 "Lionel-Groulx": [
-                    2,
-                    2
+                    "2 ou 4",
+                    "7 ou 8"
                 ]
             },
             {
-                "Atwater": [
-                    2,
-                    2
+                "Georges-Vanier": [
+                    "6 ou 7",
+                    "3 ou 4"
                 ]
             },
             {
-                "Guy-Concordia": [
-                    2,
-                    2
+                "Lucien-L'Allier": [
+                    1,
+                    9
                 ]
             },
             {
-                "Peel": [
-                    2,
-                    2
+                "Bonaventure": [
+                    "3 ou 6",
+                    "3 ou 7"
                 ]
             },
             {
-                "McGill": [
-                    2,
-                    2
+                "Square-Victoria–OACI": [
+                    "6 ou 9",
+                    "1 ou 4"
                 ]
             },
             {
-                "Place-des-Arts": [
-                    2,
-                    2
+                "Place-d'Armes": [
+                    "5 à 7",
+                    "2 à 5"
                 ]
             },
             {
-                "Saint-Laurent": [
-                    2,
-                    2
+                "Champ-de-Mars": [
+                    6,
+                    4
                 ]
             },
             {
                 "Berri-UQAM": [
-                    2,
-                    2
+                    "6 ou 8",
+                    3
                 ]
             },
             {
-                "Beaudry": [
-                    2,
-                    2
+                "Sherbrooke": [
+                    6,
+                    4
                 ]
             },
             {
-                "Papineau": [
-                    2,
-                    2
+                "Mont-Royal": [
+                    "3 ou 4",
+                    "6 ou 7"
                 ]
             },
             {
-                "Frontenac": [
-                    2,
-                    2
+                "Laurier": [
+                    [
+                        {
+                            "sortie": "Laurier",
+                            "voiture": 1
+                        },
+                        {
+                            "sortie": "St-Joseph",
+                            "voiture": 9
+                        }
+                    ],
+                    [
+                        {
+                            "sortie": "St-Joseph",
+                            "voiture": 1
+                        },
+                        {
+                            "sortie": "Laurier",
+                            "voiture": 9
+                        }
+                    ]
                 ]
             },
             {
-                "Préfontaine": [
-                    2,
-                    2
+                "Rosemont": [
+                    "6 ou 8",
+                    "2 ou 4"
                 ]
             },
             {
-                "Joliette": [
-                    2,
-                    2
+                "Beaubien": [
+                    "5 à 7",
+                    "3 à 5"
                 ]
             },
             {
-                "Pie-IX": [
-                    2,
-                    2
+                "Jean-Talon": [
+                    4,
+                    4
                 ]
             },
             {
-                "Viau": [
-                    2,
-                    2
+                "Jarry": [
+                    1,
+                    9
                 ]
             },
             {
-                "Assomption": [
-                    2,
-                    2
+                "Crémazie": [
+                    "5 ou 6",
+                    "4 ou 5"
                 ]
             },
             {
-                "Cadillac": [
-                    2,
-                    2
+                "Sauvé": [
+                    "4 ou 6",
+                    "4 ou 6"
                 ]
             },
             {
-                "Langelier": [
-                    2,
-                    2
+                "Henri-Bourassa": [
+                    3,
+                    6
                 ]
             },
             {
-                "Radisson": [
-                    2,
-                    2
+                "Cartier": [
+                    "2 ou 4",
+                    "6 ou 8"
                 ]
             },
             {
-                "Honore-Beaugrand": [
-                    2,
-                    2
+                "De La Concorde": [
+                    7,
+                    3
+                ]
+            },
+            {
+                "Montmorency": [
+                    6,
+                    null
                 ]
             }
         ],
@@ -407,19 +485,19 @@
             {
                 "Berri-UQAM": [
                     null,
-                    2
+                    "2 ou 5"
                 ]
             },
             {
                 "Parc-Jean-Drapeau": [
-                    5,
-                    2
+                    "2 ou 5",
+                    "2 ou 5"
                 ]
             },
             {
                 "Longueuil–UDS": [
-                    5,
-                    2
+                    "3 ou 4",
+                    null
                 ]
             }
         ],
@@ -433,165 +511,129 @@
         ],
         "stations": [
             {
-                "Angrignon": [
+                "Snowdon": [
                     null,
-                    2
+                    1
                 ]
             },
             {
-                "Monk": [
-                    5,
-                    2
+                "Côte-des-Neiges": [
+                    2,
+                    5
                 ]
             },
             {
-                "Jolicoeur": [
-                    5,
-                    2
+                "Université de Montréal": [
+                    3,
+                    4
                 ]
             },
             {
-                "Verdun": [
+                "Édouard-Montpetit": [
+                    "3 ou 4",
+                    "3 ou 4"
+                ]
+            },
+            {
+                "Outremont": [
+                    1,
+                    6
+                ]
+            },
+            {
+                "Acadie": [
+                    4,
+                    3
+                ]
+            },
+            {
+                "Parc": [
+                    3,
+                    4
+                ]
+            },
+            {
+                "De Castelnau": [
                     2,
                     2
                 ]
             },
             {
-                "De L'Église": [
-                    2,
-                    2
+                "Jean-Talon": [
+                    [
+                        {
+                            "sortie": "St-Hubert",
+                            "voiture": 1
+                        },
+                        {
+                            "sortie": "Jean-Talon",
+                            "voiture": 6
+                        }
+                    ],
+                    [
+                        {
+                            "sortie": "Jean-Talon",
+                            "voiture": 1
+                        },
+                        {
+                            "sortie": "St-Hubert",
+                            "voiture": 4
+                        }
+                    ]
                 ]
             },
             {
-                "LaSalle": [
-                    2,
-                    2
+                "Fabre": [
+                    [
+                        {
+                            "sortie": "Papineau",
+                            "voiture": 1
+                        },
+                        {
+                            "sortie": "Fabre",
+                            "voiture": 6
+                        }
+                    ],
+                    [
+                        {
+                            "sortie": "Fabre",
+                            "voiture": 1
+                        },
+                        {
+                            "sortie": "Papineau",
+                            "voiture": 6
+                        }
+                    ]
                 ]
             },
             {
-                "Charlevoix": [
-                    2,
-                    2
+                "D'Iberville": [
+                    [
+                        {
+                            "sortie": "D'Iberville",
+                            "voiture": 1
+                        },
+                        {
+                            "sortie": "Louis-Hébert",
+                            "voiture": 6
+                        }
+                    ],
+                    [
+                        {
+                            "sortie": "Louis-Hébert",
+                            "voiture": 1
+                        },
+                        {
+                            "sortie": "D'Iberville",
+                            "voiture": 6
+                        }
+                    ]
                 ]
             },
             {
-                "Lionel-Groulx": [
-                    2,
-                    2
-                ]
-            },
-            {
-                "Atwater": [
-                    2,
-                    2
-                ]
-            },
-            {
-                "Guy-Concordia": [
-                    2,
-                    2
-                ]
-            },
-            {
-                "Peel": [
-                    2,
-                    2
-                ]
-            },
-            {
-                "McGill": [
-                    2,
-                    2
-                ]
-            },
-            {
-                "Place-des-Arts": [
-                    2,
-                    2
-                ]
-            },
-            {
-                "Saint-Laurent": [
-                    2,
-                    2
-                ]
-            },
-            {
-                "Berri-UQAM": [
-                    2,
-                    2
-                ]
-            },
-            {
-                "Beaudry": [
-                    2,
-                    2
-                ]
-            },
-            {
-                "Papineau": [
-                    2,
-                    2
-                ]
-            },
-            {
-                "Frontenac": [
-                    2,
-                    2
-                ]
-            },
-            {
-                "Préfontaine": [
-                    2,
-                    2
-                ]
-            },
-            {
-                "Joliette": [
-                    2,
-                    2
-                ]
-            },
-            {
-                "Pie-IX": [
-                    2,
-                    2
-                ]
-            },
-            {
-                "Viau": [
-                    2,
-                    2
-                ]
-            },
-            {
-                "Assomption": [
-                    2,
-                    2
-                ]
-            },
-            {
-                "Cadillac": [
-                    2,
-                    2
-                ]
-            },
-            {
-                "Langelier": [
-                    2,
-                    2
-                ]
-            },
-            {
-                "Radisson": [
-                    2,
-                    2
-                ]
-            },
-            {
-                "Honore-Beaugrand": [
-                    2,
-                    2
+                "St-Michel": [
+                    "2 ou 3",
+                    null
                 ]
             }
         ],
