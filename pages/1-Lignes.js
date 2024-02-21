@@ -1,6 +1,5 @@
 import { StyleSheet, Text, View, TouchableOpacity, Image } from 'react-native';
 import { useContext } from 'react';
-import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 const Stack = createNativeStackNavigator();
@@ -10,12 +9,9 @@ import { MetroContexte } from '../metroContexte';
 
 export default function Lignes({ navigation }) {
     
-    const { setLigneChoisie, direction, setDirection } = useContext(MetroContexte);
-
-    console.log("direction", direction);
+    const { setLigneChoisie, setDirection } = useContext(MetroContexte);
 
     const versPage2 = (ligne, terminus) => {
-        console.log(ligne.ligne);
         setLigneChoisie(ligne.ligne);
         setDirection(terminus);
         navigation.navigate("Stations")

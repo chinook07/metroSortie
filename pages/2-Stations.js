@@ -1,9 +1,7 @@
 import { useContext, useState, useEffect } from 'react';
 import { StyleSheet, ScrollView, Text, View, TouchableOpacity } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-const Stack = createNativeStackNavigator();
 import toutesLignes from "../donnees/toutesLignes.json";
 import { MetroContexte } from '../metroContexte';
 
@@ -30,7 +28,6 @@ export default function Stations({ navigation }) {
     if (envers) toutesStations.reverse();
 
     const versPortes = (debarquer) => {
-        console.log(debarquer);
         setDestination(debarquer);
         navigation.navigate("Portes")
     }
@@ -47,7 +44,7 @@ export default function Stations({ navigation }) {
                                 onPress={() => versPortes(item)}
                                 style={[styles.bouton, index === 0 && styles.inactif]}
                             >
-                                <Text>{item}</Text>
+                                <Text style={styles.nuit}>{item}</Text>
                             </TouchableOpacity>
                         )
                     })
@@ -61,6 +58,7 @@ export default function Stations({ navigation }) {
 
 const styles = StyleSheet.create({
     container: {
+        backgroundColor: "#363636",
         flex: 1,
         gap: 10,
         alignItems: 'center',
@@ -92,7 +90,9 @@ const styles = StyleSheet.create({
         textAlign: "center"
     },
     inactif: {
-        // backgroundColor: 'gray',
         opacity: 0.5
+    },
+    nuit: {
+        color: "white"
     }
 });
