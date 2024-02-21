@@ -5,6 +5,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 const Stack = createNativeStackNavigator();
 import toutesLignes from "../donnees/toutesLignes.json";
 import metroLogo from "../assets/metroLogo.jpg";
+import remLogo from "../assets/remLogo.jpg";
 import { MetroContexte } from '../metroContexte';
 
 export default function Lignes({ navigation }) {
@@ -19,21 +20,27 @@ export default function Lignes({ navigation }) {
 
     return (
         <View style={styles.container}>
+            <Text style={styles.titre}>Titre de l'appli</Text>
             {toutesLignes.map((ligne, index) => {
                 return (
                     <View key={index} style={styles.flex1} >
                         <View style={[styles.indicateur, styles[ligne.couleur]]}>
-                            <Image source={metroLogo} style={[styles.logo]} />
+                            {
+                                ligne.couleur === "lime"
+                                    ? <Image alt='logo du REM' source={remLogo} style={[styles.logo]} />
+                                    : <Image alt='logo du métro' source={metroLogo} style={[styles.logo]} />
+                            }
                             <Text style={[styles[ligne.couleur], styles.texte]} >{ligne.ligne}</Text>
                         </View>
-                        <View style={[styles.direction, styles.bouton]} >
+                        <View style={styles.direction} >
                             {ligne.terminus.map((terminus, idx) => (
                                 <TouchableOpacity
                                     key={idx}
                                     onPress={() => versPage2(ligne, terminus)}
-                                    style={[styles[ligne.couleur], styles.flex1]}
+                                    style={[styles[ligne.couleur], styles.boutonDirection]}
                                 >
-                                    <Text title={terminus} style={styles[ligne.couleur]}>{terminus}</Text>
+                                    <Text style={[styles[ligne.couleur], styles.flex1]}>vers</Text>
+                                    <Text style={[styles[ligne.couleur], styles.flex1]}>{terminus}</Text>
                                 </TouchableOpacity>
                             ))}
                         </View>
@@ -52,6 +59,14 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         width: "100%"
     },
+    titre: {
+        backgroundColor: "#363636",
+        color: "white",
+        textTransform: "uppercase",
+        textAlign: "center",
+        padding: 10,
+        fontSize: 20
+    },
     logo: {
         width: 20,
         height: 20
@@ -59,10 +74,15 @@ const styles = StyleSheet.create({
     indicateur: {
         flexDirection: "row",
         flex: 1,
-        justifyContent: "center"
+        justifyContent: "center",
+        padding: 4
     },
     flex1: {
         flex: 1
+    },
+    boutonDirection: {
+        flex: 1,
+        justifyContent: 'center'
     },
     verte: {
         backgroundColor: "#008E4F",
@@ -82,15 +102,17 @@ const styles = StyleSheet.create({
         color: "white",
         textAlign: "center"
     },
+    lime: {
+        backgroundColor: "#85BE00",
+        textAlign: "center"
+    },
     texte: {
         flex: 4,
         textAlign: "center",
-        fontSize: 15
-    },
-    bouton: {
-        flex: 3
+        fontSize: 17
     },
     direction: {
+        flex: 3,
         flexDirection: "row",
         justifyContent: "space-between"
     }

@@ -638,5 +638,54 @@
             }
         ],
         "couleur": "bleue"
+    },
+    {
+        "ligne": "A1 – Brossard",
+        "terminus": [
+            "Brossard",
+            "Gare Centrale"
+        ],
+        "stations": [
+            {
+                "Gare Centrale": [
+                    null,
+                    [
+                        {
+                            "sortie": "Gare Centrale",
+                            "voiture": 1
+                        },
+                        {
+                            "sortie": "Place Bonaventure",
+                            "voiture": 4
+                        }
+                    ]
+                ]
+            },
+            {
+                "Ile-des-Soeurs": [
+                    1,
+                    4
+                ]
+            },
+            {
+                "Panama": [
+                    1,
+                    4
+                ]
+            },
+            {
+                "Du Quartier": [
+                    1,
+                    4
+                ]
+            },
+            {
+                "Brossard": [
+                    1,
+                    null
+                ]
+            }
+        ],
+        "couleur": "lime"
     }
 ]

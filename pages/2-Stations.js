@@ -58,36 +58,37 @@ export default function Stations({ navigation }) {
 
 const styles = StyleSheet.create({
     container: {
+        alignItems: "stretch",
         backgroundColor: "#363636",
         flex: 1,
         gap: 10,
-        alignItems: 'center',
-        justifyContent: 'center',
+        justifyContent: 'center'
     },
     titre: {
         textAlign: "center",
-        fontSize: 20
+        fontSize: 20,
+        padding: 10
     },
     bouton: {
-        // width: 100%
+        justifyContent: 'center',
+        padding: 10
     },
     verte: {
         backgroundColor: "#008E4F",
         color: "white",
-        textAlign: "center"
     },
     orange: {
         backgroundColor: "#EF8122",
-        textAlign: "center"
     },
     jaune: {
         backgroundColor: "#FFE300",
-        textAlign: "center"
     },
     bleue: {
         backgroundColor: "#0083C9",
         color: "white",
-        textAlign: "center"
+    },
+    lime: {
+        backgroundColor: "#85BE00",
     },
     inactif: {
         opacity: 0.5
