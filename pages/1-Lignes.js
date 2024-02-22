@@ -1,12 +1,10 @@
-import { StyleSheet, Text, View, TouchableOpacity, Image } from 'react-native';
 import { useContext } from 'react';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { StyleSheet, Text, View, TouchableOpacity, Image } from 'react-native';
 
-const Stack = createNativeStackNavigator();
+import { MetroContexte } from '../metroContexte';
 import toutesLignes from "../donnees/toutesLignes.json";
 import metroLogo from "../assets/metroLogo.jpg";
 import remLogo from "../assets/remLogo.jpg";
-import { MetroContexte } from '../metroContexte';
 
 export default function Lignes({ navigation }) {
     
@@ -40,7 +38,7 @@ export default function Lignes({ navigation }) {
                                     style={[styles[ligne.couleur], styles.boutonDirection]}
                                 >
                                     <Text style={[styles[ligne.couleur], styles.flex1]}>vers</Text>
-                                    <Text style={[styles[ligne.couleur], styles.flex1]}>{terminus}</Text>
+                                    <Text style={[styles[ligne.couleur], styles.flex1, styles.terminus]}>{terminus}</Text>
                                 </TouchableOpacity>
                             ))}
                         </View>
@@ -62,20 +60,26 @@ const styles = StyleSheet.create({
     titre: {
         backgroundColor: "#363636",
         color: "white",
-        textTransform: "uppercase",
-        textAlign: "center",
+        fontSize: 20,
         padding: 10,
-        fontSize: 20
-    },
-    logo: {
-        width: 20,
-        height: 20
+        textAlign: "center",
+        textTransform: "uppercase"
     },
     indicateur: {
         flexDirection: "row",
         flex: 1,
+        gap: 10,
         justifyContent: "center",
         padding: 4
+    },
+    logo: {
+        height: 20,
+        objectFit: "contain",
+        width: 20
+    },
+    texte: {
+        textAlign: "center",
+        fontSize: 17
     },
     flex1: {
         flex: 1
@@ -106,14 +110,13 @@ const styles = StyleSheet.create({
         backgroundColor: "#85BE00",
         textAlign: "center"
     },
-    texte: {
-        flex: 4,
-        textAlign: "center",
-        fontSize: 17
-    },
     direction: {
         flex: 3,
         flexDirection: "row",
         justifyContent: "space-between"
+    },
+    terminus: {
+        fontSize: 17,
+        textTransform: "uppercase",
     }
 });

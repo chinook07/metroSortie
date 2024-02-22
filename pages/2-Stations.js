@@ -1,16 +1,15 @@
-import { useContext, useState, useEffect } from 'react';
+import { useContext, useEffect } from 'react';
 import { StyleSheet, ScrollView, Text, View, TouchableOpacity } from 'react-native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-import toutesLignes from "../donnees/toutesLignes.json";
 import { MetroContexte } from '../metroContexte';
+import toutesLignes from "../donnees/toutesLignes.json";
 
 export default function Stations({ navigation }) {
 
     const { ligneChoisie, direction, envers, setEnvers, setDestination } = useContext(MetroContexte);
 
     useEffect(() => {
-        if (direction === donneesLigne.terminus[1]) {
+        if (direction === donneesLigne.terminus[0]) {
             setEnvers(true);
         } else {
             setEnvers(false);
@@ -33,18 +32,38 @@ export default function Stations({ navigation }) {
     }
     
     return (
-        <ScrollView>
-            <View style={styles.container}>
-                <Text style={[styles.titre, styles[donneesLigne.couleur]]}>Vous débarquez où?</Text>
+        <ScrollView contentContainerStyle={styles.container} endFillColor={"#363636"}>
+            <Text style={[styles.titre, styles[donneesLigne.couleur]]}>Vous débarquez où?</Text>
+            <View style={styles.choix}>
                 {
                     toutesStations.map((item, index) => {
-                        return (
+                        if (index === 0) {
+                            return (
+                                <View
+                                    key={index}
+                                    style={[styles.bouton, styles.inactif]}
+                                >
+                                    <View style={[styles.carre, styles[donneesLigne.couleur]]}>
+                                        <View style={styles.cercle}></View>
+                                    </View>
+                                    <View style={styles.nomStation}>
+                                        <Text style={styles.nomStationTexte}>{item}</Text>
+                                    </View>
+                                </View>
+                            )
+                        } else return (
+                            
                             <TouchableOpacity
                                 key={index}
                                 onPress={() => versPortes(item)}
-                                style={[styles.bouton, index === 0 && styles.inactif]}
+                                style={styles.bouton}
                             >
-                                <Text style={styles.nuit}>{item}</Text>
+                                <View style={[styles.carre, styles[donneesLigne.couleur]]}>
+                                    <View style={styles.cercle}></View>
+                                </View>
+                                <View style={styles.nomStation}>
+                                    <Text style={styles.nomStationTexte}>{item}</Text>
+                                </View>
                             </TouchableOpacity>
                         )
                     })
@@ -52,26 +71,41 @@ export default function Stations({ navigation }) {
             </View>
         </ScrollView>
     )
-
-    
 }
 
 const styles = StyleSheet.create({
     container: {
-        alignItems: "stretch",
         backgroundColor: "#363636",
-        flex: 1,
-        gap: 10,
         justifyContent: 'center'
     },
     titre: {
-        textAlign: "center",
+        flex: 1,
         fontSize: 20,
-        padding: 10
+        padding: 10,
+        textAlign: "center"
+    },
+    choix: {
+        flex: 5
     },
     bouton: {
-        justifyContent: 'center',
-        padding: 10
+        flexDirection: "row",
+        gap: 10
+    },
+    carre: {
+        alignItems: "center",
+        flexDirection: "row",
+        height: 50,
+        justifyContent: "center",
+        width: 30
+    },
+    cercle: {
+        backgroundColor: "white",
+        borderRadius: 10,
+        height: 20,
+        width: 20
+    },
+    nomStation: {
+        justifyContent: "center"
     },
     verte: {
         backgroundColor: "#008E4F",
@@ -93,7 +127,8 @@ const styles = StyleSheet.create({
     inactif: {
         opacity: 0.5
     },
-    nuit: {
-        color: "white"
+    nomStationTexte: {
+        color: "white",
+        fontSize: 16
     }
 });

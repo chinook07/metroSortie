@@ -1,9 +1,7 @@
-import { StatusBar } from 'expo-status-bar';
 import { useContext } from 'react';
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
-import { faHouse } from '@fortawesome/free-solid-svg-icons';
+import { faHouse, faPersonRunning } from '@fortawesome/free-solid-svg-icons';
 
 import { MetroContexte } from '../metroContexte';
 import toutesLignes from "../donnees/toutesLignes.json";
@@ -27,42 +25,62 @@ export default function Portes({ navigation }) {
     
     return (
         <View style={styles.container}>
-            {
-                Array.isArray(voiture)
-                    ? <>
-                        <Text style={styles.nuit}>Attention! Plusieurs sorties sont possibles.</Text>
-                        {
-                            voiture.map((sortie, index) => {
-                                return (
-                                    <Text key={index} style={styles.nuit}>Sortie {sortie.sortie} : voiture {sortie.voiture}</Text>
-                                )
-                            })
-                        }
-                    </>
-                    : <Text style={styles.nuit}>Embarquez dans la voiture {voiture}</Text>
-            }
-            <Text style={styles.nuit}>pour débarquer à {destination}</Text>
+            <View style={styles.infos}>
+                {
+                    Array.isArray(voiture)
+                        ? <>
+                            <Text style={styles.nuit}>Attention! Plusieurs sorties sont possibles.</Text>
+                            {
+                                voiture.map((sortie, index) => {
+                                    return (
+                                        <View key={index} style={styles.sortie}>
+                                            <FontAwesomeIcon icon={faPersonRunning} color='white' />
+                                            <Text style={styles.nuit}>Sortie {sortie.sortie} : voiture {sortie.voiture}</Text>
+                                        </View>
+                                    )
+                                })
+                            }
+                        </>
+                        : <Text style={styles.nuit}>Embarquez dans la voiture {voiture}</Text>
+                }
+                <Text style={styles.nuit}>Prochaine station : {destination}</Text>
+            </View>
             <TouchableOpacity onPress={retour} style={styles.retour}>
                 <FontAwesomeIcon icon={ faHouse } color='white' />
                 <Text style={styles.nuit}>Retour</Text>
             </TouchableOpacity>
-            <StatusBar style="auto" />
         </View>
     );
 }
 
 const styles = StyleSheet.create({
     container: {
+        alignItems: 'center',
         backgroundColor: "#363636",
         flex: 1,
-        alignItems: 'center',
-        justifyContent: 'center',
+        justifyContent: "space-evenly"
     },
-    retour: {
+    infos: {
+        gap: 10
+    },
+    sortie: {
+        alignItems: "center",
         flexDirection: "row",
         gap: 5
     },
+    retour: {
+        alignItems: "center",
+        borderColor: "white",
+        borderStyle: "solid",
+        borderWidth: 1,
+        borderRadius: 10,
+        flexDirection: "row",
+        gap: 5,
+        paddingHorizontal: 15,
+        paddingVertical: 7
+    },
     nuit: {
-        color: "white"
+        color: "white",
+        fontSize: 18
     }
 });

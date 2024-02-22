@@ -1,14 +1,11 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+const Stack = createNativeStackNavigator();
 
+import Provider from "./metroContexte";
 import Lignes from "./pages/1-Lignes";
 import Stations from "./pages/2-Stations";
 import Portes from "./pages/3-Portes";
-import Provider from "./metroContexte";
-
-const Stack = createNativeStackNavigator();
 
 export default function App() {
     return (
@@ -21,6 +18,5 @@ export default function App() {
                 </Stack.Navigator>
             </NavigationContainer>
         </Provider>
-        
     );
 }

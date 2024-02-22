@@ -2,8 +2,8 @@
     {
         "ligne": "1 – verte",
         "terminus": [
-            "Honoré-Beaugrand",
-            "Angrignon"
+            "Angrignon",
+            "Honoré-Beaugrand"
         ],
         "stations": [
             {
@@ -223,13 +223,14 @@
                 ]
             }
         ],
-        "couleur": "verte"
+        "couleur": "verte",
+        "hex": "#008E4F"
     },
     {
         "ligne": "2 – orange",
         "terminus": [
-            "Montmorency",
-            "Côte-Vertu"
+            "Côte-Vertu",
+            "Montmorency"
         ],
         "stations": [
             {
@@ -473,13 +474,14 @@
                 ]
             }
         ],
-        "couleur": "orange"
+        "couleur": "orange",
+        "hex": "#EF8122"
     },
     {
         "ligne": "4 – jaune",
         "terminus": [
-            "Longueuil–UDS",
-            "Berri-UQAM"
+            "Berri-UQAM",
+            "Longueuil–UDS"
         ],
         "stations": [
             {
@@ -501,13 +503,14 @@
                 ]
             }
         ],
-        "couleur": "jaune"
+        "couleur": "jaune",
+        "hex": "#FFE300"
     },
     {
         "ligne": "5 – bleue",
         "terminus": [
-            "St-Michel",
-            "Snowdon"
+            "Snowdon",
+            "St-Michel"
         ],
         "stations": [
             {
@@ -637,13 +640,14 @@
                 ]
             }
         ],
-        "couleur": "bleue"
+        "couleur": "bleue",
+        "hex": "#0083C9"
     },
     {
         "ligne": "A1 – Brossard",
         "terminus": [
-            "Brossard",
-            "Gare Centrale"
+            "Gare Centrale",
+            "Brossard"
         ],
         "stations": [
             {
@@ -686,6 +690,7 @@
                 ]
             }
         ],
-        "couleur": "lime"
+        "couleur": "lime",
+        "hex": "#85BE00"
     }
 ]
