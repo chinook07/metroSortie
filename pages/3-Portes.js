@@ -1,10 +1,12 @@
 import { useContext, useEffect, useState } from 'react';
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
-import { faHouse, faPersonRunning, faPersonRays } from '@fortawesome/free-solid-svg-icons';
+import { faHouse, faPersonRunning } from '@fortawesome/free-solid-svg-icons';
 
 import { MetroContexte } from '../metroContexte';
 import toutesLignes from "../donnees/toutesLignes.json";
+import GraphRame from './composantes/GraphRame';
+import InfoContresens from './composantes/InfoContresens';
 
 export default function Portes({ navigation }) {
 
@@ -67,27 +69,12 @@ export default function Portes({ navigation }) {
     
     return (
         <View style={styles.container}>
-            <View style={styles.graph}>
-                <View style={styles.rail}>
-                    <View style={styles.rame}>
-                        {
-                            [...Array(infoLigne.voitures)].map((v, i) =>
-                                <View key={i} style={[styles.voit, { backgroundColor: infoLigne.hex[0] }, i === 0 && styles.premier, i === infoLigne.voitures - 1 && styles.dernier]}>
-                                    {
-                                        combienVoitures === 1 && i + 1 === voiture && <FontAwesomeIcon icon={faPersonRays} style={infoLigne.contraste ? { color: "white" } : { color: "black" }}/>
-                                    }
-                                    {
-                                        (combienVoitures === 2 || combienVoitures === 3) && voiture.includes(i + 1) && <FontAwesomeIcon icon={faPersonRays} style={infoLigne.contraste ? { color: "white" } : { color: "black" }}/>
-                                    }
-                                    {
-                                        combienVoitures === 9 && portesConcordia.includes(i + 1) && <FontAwesomeIcon icon={faPersonRays} style={infoLigne.contraste ? { color: "white" } : { color: "black" }}/>
-                                    }
-                                </View>
-                            )
-                        }
-                    </View>
-                </View>
-            </View>
+            <GraphRame
+                combienVoitures={combienVoitures}
+                infoLigne={infoLigne}
+                portesConcordia={portesConcordia}
+                voiture={voiture}
+            />
             <View style={styles.panneau}>
                 <View style={styles.infos}>
                     {
@@ -157,37 +144,18 @@ export default function Portes({ navigation }) {
                 </TouchableOpacity>
                 {
                     quaiContresens.length > 0 &&
-                    <View style={styles.gap}>
-                            {
-                                quaiContresens.length === 1 &&
-                                <Text style={styles.nuit}>Attention! Embarquez-vous à la station {quaiContresens[0]}?</Text>
-                            }
-                            {
-                                quaiContresens.length > 1 &&
-                                <>
-                                    <Text style={styles.nuit}>Attention! Embarquez-vous aux stations suivantes?</Text>
-                                    {
-                                        quaiContresens.map((item, index) => {
-                                            return (
-                                                <Text key={index} style={styles.liste}>{item}</Text>
-                                            )
-                                        })
-                                    }
-                                </>
-                            }
-                            <Text style={styles.nuit}>Les trains arrivent dans l'autre sens.</Text>
-                            {
-                                infoLigne.ligne === "A1 – Brossard" && envers &&
-                                <Text style={styles.nuit}>C'est aussi le cas à Brossard, selon le quai utilisé.</Text>
-                            }
-                            {
-                                infoLigne.ligne === "A1 – Brossard" && !envers &&
-                                <Text style={styles.nuit}>C'est aussi le cas à la Gare Centrale, selon le quai utilisé.</Text>
-                            }
-                    </View>
-                    
+                    <InfoContresens
+                        quaiContresens={quaiContresens}
+                    />
                 }
-                
+                {
+                    infoLigne.ligne === "A1 – Brossard" && envers &&
+                    <Text style={styles.nuit}>Les deux quais sont utilisés à Brossard. La train peut ne pas arriver « dans le bon sens ».</Text>
+                }
+                {
+                    infoLigne.ligne === "A1 – Brossard" && !envers &&
+                    <Text style={styles.nuit}>Les deux quais sont utilisés à la Gare Centrale. La train peut ne pas arriver « dans le bon sens ».</Text>
+                }
             </View>
         </View>
     );
@@ -198,45 +166,6 @@ const styles = StyleSheet.create({
         backgroundColor: "#363636",
         flexDirection: "row",
         flex: 1
-    },
-    graph: {
-        flex: 1,
-        flexDirection: "row",
-        justifyContent: "center",
-    },
-    rail: {
-        borderColor: "white",
-        borderStyle: "solid",
-        borderLeftWidth: 1,
-        borderRightWidth: 1,
-        justifyContent: "center",
-        width: 30,
-    },
-    rame: {
-        alignItems: "center",
-        flex: 1,
-        marginTop: 20,
-        justifyContent: "center"
-    },
-    voit: {
-        alignItems: "center",
-        backgroundColor: "yellow",
-        borderBottomWidth: 1,
-        borderColor: "white",
-        borderLeftWidth: 2,
-        borderRightWidth: 2,
-        borderTopWidth: 1,
-        height: 60,
-        justifyContent: "center",
-        width: 35,
-    },
-    premier: {
-        borderTopLeftRadius: 10,
-        borderTopRightRadius: 10
-    },
-    dernier: {
-        borderBottomLeftRadius: 10,
-        borderBottomRightRadius: 10
     },
     panneau: {
         // backgroundColor: "red",
@@ -270,12 +199,5 @@ const styles = StyleSheet.create({
     nuit: {
         color: "white",
         fontSize: 18
-    },
-    liste: {
-        color: "white",
-        textAlign: "center"
-    },
-    reverse: {
-        color: "white"
     }
 });
