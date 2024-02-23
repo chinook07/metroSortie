@@ -16,8 +16,6 @@ export default function Portes({ navigation }) {
     const toutesStations = infoLigne.stations;
     const voitures = toutesStations.find(obj => obj.hasOwnProperty(destination))[destination];
 
-    console.log(toutesStations);
-
     let voiture;
     if (envers) { voiture = voitures[1] } else { voiture = voitures[0] }
 
@@ -26,6 +24,24 @@ export default function Portes({ navigation }) {
         setLigneChoisie(null);
         setDirection(null);
         setDestination(null);
+    }
+
+    let quaiContresens = [];
+    let nomsStations = Object.keys(Object.assign({}, ...toutesStations));
+    if (envers) {
+        const destinationIndex = nomsStations.length - 1 - nomsStations.indexOf(destination);
+        nomsStations.reverse().forEach((station, index) => {
+            if (infoLigne.mauvaisSens[1].includes(station) && index < destinationIndex) {
+                quaiContresens.push(station)
+            }
+        })
+    } else {
+        const destinationIndex = nomsStations.indexOf(destination);
+        nomsStations.forEach((station, index) => {
+            if (infoLigne.mauvaisSens[0].includes(station) && index < destinationIndex) {
+                quaiContresens.push(station)
+            }
+        })
     }
 
     useEffect(() => {
@@ -139,10 +155,39 @@ export default function Portes({ navigation }) {
                     <FontAwesomeIcon icon={ faHouse } color='white' />
                     <Text style={styles.nuit}>Retour</Text>
                 </TouchableOpacity>
-                {/* <View>
-                    <Text style={styles.nuit}>Attention! Embarquez-vous aux stations?</Text>
-                    <Text style={styles.nuit}>Les trains arrivent dans l'autre sens.</Text>
-                </View> */}
+                {
+                    quaiContresens.length > 0 &&
+                    <View style={styles.gap}>
+                            {
+                                quaiContresens.length === 1 &&
+                                <Text style={styles.nuit}>Attention! Embarquez-vous à la station {quaiContresens[0]}?</Text>
+                            }
+                            {
+                                quaiContresens.length > 1 &&
+                                <>
+                                    <Text style={styles.nuit}>Attention! Embarquez-vous aux stations suivantes?</Text>
+                                    {
+                                        quaiContresens.map((item, index) => {
+                                            return (
+                                                <Text key={index} style={styles.liste}>{item}</Text>
+                                            )
+                                        })
+                                    }
+                                </>
+                            }
+                            <Text style={styles.nuit}>Les trains arrivent dans l'autre sens.</Text>
+                            {
+                                infoLigne.ligne === "A1 – Brossard" && envers &&
+                                <Text style={styles.nuit}>C'est aussi le cas à Brossard, selon le quai utilisé.</Text>
+                            }
+                            {
+                                infoLigne.ligne === "A1 – Brossard" && !envers &&
+                                <Text style={styles.nuit}>C'est aussi le cas à la Gare Centrale, selon le quai utilisé.</Text>
+                            }
+                    </View>
+                    
+                }
+                
             </View>
         </View>
     );
@@ -208,8 +253,8 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         gap: 5
     },
-    choix2: {
-
+    gap: {
+        gap: 10
     },
     retour: {
         alignItems: "center",
@@ -225,6 +270,10 @@ const styles = StyleSheet.create({
     nuit: {
         color: "white",
         fontSize: 18
+    },
+    liste: {
+        color: "white",
+        textAlign: "center"
     },
     reverse: {
         color: "white"

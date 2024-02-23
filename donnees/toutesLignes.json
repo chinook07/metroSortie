@@ -656,7 +656,16 @@
             "#C8C2CC"
         ],
         "rame": "azur",
-        "voitures": 9
+        "voitures": 9,
+        "mauvaisSens": [
+            [
+                "Lionel-Groulx",
+                "Henri-Bourassa"
+            ],
+            [
+                "Snowdon"
+            ]
+        ]
     },
     {
         "ligne": "4 – jaune",
@@ -911,6 +920,20 @@
             "#85BE00"
         ],
         "rame": "rem",
-        "voitures": 4
+        "voitures": 4,
+        "quaiVariable": [
+            "Gare Centrale",
+            "Brossard"
+        ],
+        "mauvaisSens": [
+            [
+                "Panama",
+                "Du Quartier"
+            ],
+            [
+                "Du Quartier",
+                "Panama"
+            ]
+        ]
     }
 ]
