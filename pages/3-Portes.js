@@ -139,10 +139,10 @@ export default function Portes({ navigation }) {
                     <FontAwesomeIcon icon={ faHouse } color='white' />
                     <Text style={styles.nuit}>Retour</Text>
                 </TouchableOpacity>
-                {/* <View>
+                <View>
                     <Text style={styles.nuit}>Attention! Embarquez-vous aux stations?</Text>
                     <Text style={styles.nuit}>Les trains arrivent dans l'autre sens.</Text>
-                </View> */}
+                </View>
             </View>
         </View>
     );
