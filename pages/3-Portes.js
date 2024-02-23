@@ -16,6 +16,8 @@ export default function Portes({ navigation }) {
     const toutesStations = infoLigne.stations;
     const voitures = toutesStations.find(obj => obj.hasOwnProperty(destination))[destination];
 
+    console.log(toutesStations);
+
     let voiture;
     if (envers) { voiture = voitures[1] } else { voiture = voitures[0] }
 
@@ -54,15 +56,15 @@ export default function Portes({ navigation }) {
                     <View style={styles.rame}>
                         {
                             [...Array(infoLigne.voitures)].map((v, i) =>
-                                <View key={i} style={[styles.voit, { backgroundColor: infoLigne.hex[1] }, i === 0 && styles.premier, i === infoLigne.voitures - 1 && styles.dernier]}>
+                                <View key={i} style={[styles.voit, { backgroundColor: infoLigne.hex[0] }, i === 0 && styles.premier, i === infoLigne.voitures - 1 && styles.dernier]}>
                                     {
-                                        combienVoitures === 1 && i + 1 === voiture && <FontAwesomeIcon icon={faPersonRays} />
+                                        combienVoitures === 1 && i + 1 === voiture && <FontAwesomeIcon icon={faPersonRays} style={infoLigne.contraste ? { color: "white" } : { color: "black" }}/>
                                     }
                                     {
-                                        (combienVoitures === 2 || combienVoitures === 3) && voiture.includes(i + 1) && <FontAwesomeIcon icon={faPersonRays} />
+                                        (combienVoitures === 2 || combienVoitures === 3) && voiture.includes(i + 1) && <FontAwesomeIcon icon={faPersonRays} style={infoLigne.contraste ? { color: "white" } : { color: "black" }}/>
                                     }
                                     {
-                                        combienVoitures === 9 && portesConcordia.includes(i + 1) && <FontAwesomeIcon icon={faPersonRays} />
+                                        combienVoitures === 9 && portesConcordia.includes(i + 1) && <FontAwesomeIcon icon={faPersonRays} style={infoLigne.contraste ? { color: "white" } : { color: "black" }}/>
                                     }
                                 </View>
                             )
@@ -137,6 +139,10 @@ export default function Portes({ navigation }) {
                     <FontAwesomeIcon icon={ faHouse } color='white' />
                     <Text style={styles.nuit}>Retour</Text>
                 </TouchableOpacity>
+                {/* <View>
+                    <Text style={styles.nuit}>Attention! Embarquez-vous aux stations?</Text>
+                    <Text style={styles.nuit}>Les trains arrivent dans l'autre sens.</Text>
+                </View> */}
             </View>
         </View>
     );
@@ -219,5 +225,8 @@ const styles = StyleSheet.create({
     nuit: {
         color: "white",
         fontSize: 18
+    },
+    reverse: {
+        color: "white"
     }
 });

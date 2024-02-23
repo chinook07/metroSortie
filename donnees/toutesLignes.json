@@ -303,12 +303,23 @@
             }
         ],
         "couleur": "verte",
+        "contraste": true,
         "hex": [
             "#008E4F",
             "#C8C2CC"
         ],
         "rame": "azur",
-        "voitures": 9
+        "voitures": 9,
+        "mauvaisSens": [
+            [
+                "De L'Église",
+                "Charlevoix",
+                "Lionel-Groulx"
+            ],
+            [
+                "De L'Église"
+            ]
+        ]
     },
     {
         "ligne": "2 – orange",
@@ -639,6 +650,7 @@
             }
         ],
         "couleur": "orange",
+        "contraste": false,
         "hex": [
             "#EF8122",
             "#C8C2CC"
@@ -685,6 +697,7 @@
             }
         ],
         "couleur": "jaune",
+        "contraste": false,
         "hex": [
             "#FFE300",
             "#7EA4BB"
@@ -836,6 +849,7 @@
             }
         ],
         "couleur": "bleue",
+        "contraste": true,
         "hex": [
             "#0083C9",
             "#7EA4BB"
@@ -891,6 +905,7 @@
             }
         ],
         "couleur": "lime",
+        "contraste": false,
         "hex": [
             "#85BE00",
             "#85BE00"
