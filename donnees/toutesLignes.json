@@ -319,6 +319,68 @@
             [
                 "De L'Église"
             ]
+        ],
+        "ascenseur": [
+            {
+                "Angrignon": [
+                    null,
+                    3
+                ]
+            },
+            {
+                "Jolicoeur": [
+                    5,
+                    5
+                ]
+            },
+            {
+                "Lionel-Groulx": [
+                    6,
+                    5
+                ]
+            },
+            {
+                "McGill": [
+                    9,
+                    1
+                ]
+            },
+            {
+                "Place-des-Arts": [
+                    3,
+                    7
+                ]
+            },
+            {
+                "Berri-UQAM": [
+                    4,
+                    3
+                ]
+            },
+            {
+                "Préfontaine": [
+                    7,
+                    3
+                ]
+            },
+            {
+                "Pie-IX": [
+                    6,
+                    4
+                ]
+            },
+            {
+                "Viau": [
+                    1,
+                    9
+                ]
+            },
+            {
+                "Honoré-Beaugrand": [
+                    3,
+                    null
+                ]
+            }
         ]
     },
     {
@@ -420,8 +482,14 @@
             },
             {
                 "Vendôme": [
-                    6,
-                    4
+                    [
+                        4,
+                        6
+                    ],
+                    [
+                        4,
+                        6
+                    ]
                 ]
             },
             {
@@ -665,6 +733,104 @@
             [
                 "Snowdon"
             ]
+        ],
+        "ascenseur": [
+            {
+                "Côte-Vertu": [
+                    null,
+                    4
+                ]
+            },
+            {
+                "Du Collège": [
+                    1,
+                    9
+                ]
+            },
+            {
+                "Snowdon": [
+                    2,
+                    8
+                ]
+            },
+            {
+                "Vendôme": [
+                    4,
+                    6
+                ]
+            },
+            {
+                "Lionel-Groulx": [
+                    3,
+                    5
+                ]
+            },
+            {
+                "Bonaventure": [
+                    6,
+                    4
+                ]
+            },
+            {
+                "Place-d'Armes": [
+                    7,
+                    3
+                ]
+            },
+            {
+                "Champ-de-Mars": [
+                    4,
+                    6
+                ]
+            },
+            {
+                "Berri-UQAM": [
+                    7,
+                    3
+                ]
+            },
+            {
+                "Mont-Royal": [
+                    1,
+                    9
+                ]
+            },
+            {
+                "Rosemont": [
+                    7,
+                    3
+                ]
+            },
+            {
+                "Jean-Talon": [
+                    9,
+                    1
+                ]
+            },
+            {
+                "Henri-Bourassa": [
+                    3,
+                    6
+                ]
+            },
+            {
+                "Cartier": [
+                    2,
+                    8
+                ]
+            },
+            {
+                "De La Concorde": [
+                    7,
+                    3
+                ]
+            },
+            {
+                "Montmorency": [
+                    6,
+                    null
+                ]
+            }
         ]
     },
     {
@@ -864,7 +1030,27 @@
             "#7EA4BB"
         ],
         "rame": "mr73",
-        "voitures": 6
+        "voitures": 6,
+        "ascenseur": [
+            {
+                "Snowdon": [
+                    null,
+                    1
+                ]
+            },
+            {
+                "Jean-Talon": [
+                    99,
+                    99
+                ]
+            },
+            {
+                "D'Iberville": [
+                    1,
+                    9
+                ]
+            }
+        ]
     },
     {
         "ligne": "A1 – Brossard",
@@ -934,6 +1120,38 @@
                 "Du Quartier",
                 "Panama"
             ]
+        ],
+        "ascenseur": [
+            {
+                "Gare Centrale": [
+                    null,
+                    1
+                ]
+            },
+            {
+                "Ile-des-Soeurs": [
+                    1,
+                    4
+                ]
+            },
+            {
+                "Panama": [
+                    1,
+                    4
+                ]
+            },
+            {
+                "Du Quartier": [
+                    1,
+                    4
+                ]
+            },
+            {
+                "Brossard": [
+                    1,
+                    null
+                ]
+            }
         ]
     }
 ]
