@@ -12,7 +12,9 @@ Si tu débarques à Papineau, peu importe la direction, tu auras des escaliers v
 ## Et dans le cas où il y a plusieurs édicules?
 À Guy-Concordia, ça fait toute la différence. L'appli te proposera d'être assis (ou debout) dans la voiture 1 pour une sortie, ou dans la voiture 9 pour l'autre.
 ## Et les stations de correspondances?
-J'y travaille dessus. Même chose pour les ascenseurs.
+J'y travaille dessus.
+## Et les ascenseurs?
+C'est maintenant possible de voir où débarquer pour être près des ascenseurs, sauf pour Jean-Talon (ligne bleue), faute de connaissances avec la station.
 ## Le tout avec React Native?
 Oui! J'ai pensé faire le travail dans React.js, mais à moment donné, il fallait même apprendre un dialecte de React.
 ## Ok! J'ai hâte de voir ça!
