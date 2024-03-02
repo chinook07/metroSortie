@@ -18,7 +18,7 @@ export default function Lignes({ navigation }) {
 
     return (
         <View style={styles.container}>
-            <Text style={styles.titre}>Titre de l'appli</Text>
+            <Text style={styles.titre}>Métro express</Text>
             {toutesLignes.map((ligne, index) => {
                 return (
                     <View key={index} style={styles.flex1} >
@@ -53,7 +53,6 @@ const styles = StyleSheet.create({
     container: {
         alignItems: 'stretch',
         flex: 1,
-        flexDirection: "column",
         justifyContent: 'center',
         width: "100%"
     },

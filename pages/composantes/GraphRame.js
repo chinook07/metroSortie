@@ -1,8 +1,23 @@
+import { useContext } from 'react';
 import { StyleSheet, View } from 'react-native';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
-import { faPersonRays, faArrowUp } from '@fortawesome/free-solid-svg-icons';
+import { faPersonRays, faArrowUp, faElevator } from '@fortawesome/free-solid-svg-icons';
 
-export default function GraphRame({ combienVoitures, infoLigne, portesConcordia, voiture }) {
+import { MetroContexte } from '../../metroContexte';
+
+export default function GraphRame({ combienVoitures, envers, infoLigne, portesConcordia, voiture }) {
+
+    const { destination } = useContext(MetroContexte);
+
+    let acces = infoLigne.ascenseur.find((station) => Object.keys(station)[0] === destination);
+    let sortieAcces = [0, 0];
+    if (acces !== undefined) {
+        if (envers) {
+            sortieAcces = Object.values(acces)[0][1];
+        } else {
+            sortieAcces = Object.values(acces)[0][0];
+        } 
+    }
     
     return (
         <View style={styles.graph}>
@@ -12,6 +27,9 @@ export default function GraphRame({ combienVoitures, infoLigne, portesConcordia,
                     {
                         [...Array(infoLigne.voitures)].map((v, i) =>
                             <View key={i} style={[styles.voit, { backgroundColor: infoLigne.hex[0] }, i === 0 && styles.premier, i === infoLigne.voitures - 1 && styles.dernier]}>
+                                {
+                                    sortieAcces === i + 1 && <FontAwesomeIcon icon={faElevator} style={infoLigne.contraste ? { color: "white" } : { color: "black" }}/>
+                                }
                                 {
                                     combienVoitures === 1 && i + 1 === voiture && <FontAwesomeIcon icon={faPersonRays} style={infoLigne.contraste ? { color: "white" } : { color: "black" }}/>
                                 }
@@ -59,6 +77,7 @@ const styles = StyleSheet.create({
         borderLeftWidth: 2,
         borderRightWidth: 2,
         borderTopWidth: 1,
+        gap: 5,
         height: 60,
         justifyContent: "center",
         width: 35,

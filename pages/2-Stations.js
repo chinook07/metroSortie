@@ -1,5 +1,7 @@
 import { useContext, useEffect } from 'react';
 import { StyleSheet, ScrollView, Text, View, TouchableOpacity } from 'react-native';
+import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
+import { faElevator } from '@fortawesome/free-solid-svg-icons';
 
 import { MetroContexte } from '../metroContexte';
 import toutesLignes from "../donnees/toutesLignes.json";
@@ -17,6 +19,11 @@ export default function Stations({ navigation }) {
     }, [])
 
     const donneesLigne = toutesLignes.find(ligne => ligne.ligne === ligneChoisie);
+
+    let stationsAccessibles = [];
+    donneesLigne.ascenseur.forEach(station => {
+        stationsAccessibles.push(Object.keys(station)[0])
+    })
 
     const toutesStations = [];
     donneesLigne.stations.forEach(station => {
@@ -49,10 +56,14 @@ export default function Stations({ navigation }) {
                                     <View style={styles.nomStation}>
                                         <Text style={styles.nomStationTexte}>{item}</Text>
                                     </View>
+                                    {
+                                        stationsAccessibles.includes(item) && <View>
+                                            <FontAwesomeIcon icon={faElevator} style={styles.lift} />
+                                        </View>
+                                    }
                                 </View>
                             )
                         } else return (
-                            
                             <TouchableOpacity
                                 key={index}
                                 onPress={() => versPortes(item)}
@@ -64,6 +75,11 @@ export default function Stations({ navigation }) {
                                 <View style={styles.nomStation}>
                                     <Text style={styles.nomStationTexte}>{item}</Text>
                                 </View>
+                                {
+                                    stationsAccessibles.includes(item) && <View>
+                                        <FontAwesomeIcon icon={faElevator} style={styles.lift} />
+                                    </View>
+                                }
                             </TouchableOpacity>
                         )
                     })
@@ -88,6 +104,7 @@ const styles = StyleSheet.create({
         flex: 5
     },
     bouton: {
+        alignItems: "center",
         flexDirection: "row",
         gap: 10
     },
@@ -130,5 +147,8 @@ const styles = StyleSheet.create({
     nomStationTexte: {
         color: "white",
         fontSize: 16
+    },
+    lift: {
+        color: "white"
     }
 });
