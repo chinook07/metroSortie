@@ -71,6 +71,7 @@ export default function Portes({ navigation }) {
         <View style={styles.container}>
             <GraphRame
                 combienVoitures={combienVoitures}
+                envers={envers}
                 infoLigne={infoLigne}
                 portesConcordia={portesConcordia}
                 voiture={voiture}

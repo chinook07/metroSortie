@@ -183,8 +183,18 @@
             },
             {
                 "Berri-UQAM": [
-                    "à venir",
-                    "à venir"
+                    [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5
+                    ],
+                    [
+                        3,
+                        5,
+                        8
+                    ]
                 ]
             },
             {
@@ -324,7 +334,7 @@
             {
                 "Angrignon": [
                     null,
-                    3
+                    6
                 ]
             },
             {
@@ -878,7 +888,19 @@
             "#7EA4BB"
         ],
         "rame": "mr73",
-        "voitures": 9
+        "voitures": 9,
+        "mauvaisSens": [
+            [],
+            []
+        ],
+        "ascenseur": [
+            {
+                "Parc-Jean-Drapeau": [
+                    5,
+                    5
+                ]
+            }
+        ]
     },
     {
         "ligne": "5 – bleue",
@@ -1031,6 +1053,10 @@
         ],
         "rame": "mr73",
         "voitures": 6,
+        "mauvaisSens": [
+            [],
+            []
+        ],
         "ascenseur": [
             {
                 "Snowdon": [
@@ -1040,8 +1066,8 @@
             },
             {
                 "Jean-Talon": [
-                    99,
-                    99
+                    5,
+                    2
                 ]
             },
             {
