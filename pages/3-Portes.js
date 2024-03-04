@@ -10,7 +10,7 @@ import InfoContresens from './composantes/InfoContresens';
 
 export default function Portes({ navigation }) {
 
-    const { ligneChoisie, setLigneChoisie, setDirection, destination, setDestination, envers, setEnvers } = useContext(MetroContexte);
+    const { ligneChoisie, setLigneChoisie, setDirection, destination, setDestination, envers } = useContext(MetroContexte);
     const [combienVoitures, setCombienVoitures] = useState();
     const [portesConcordia, setPortesConcordia] = useState([]);
 
@@ -50,20 +50,15 @@ export default function Portes({ navigation }) {
         if (Array.isArray(voiture)) {
             if (voiture.length > 2) {
                 setCombienVoitures(3)
+            } else if (Number.isInteger(voiture[0])) {
+                setCombienVoitures(2)
             } else {
-                if (Number.isInteger(voiture[0])) {
-                    setCombienVoitures(2)
-                } else {
-                    setCombienVoitures(9)
-                    let portesConc = [];
-                    voiture.forEach(item => {
-                        portesConc.push(item.voiture)
-                    });
-                    setPortesConcordia(portesConc)
-                }
+                setCombienVoitures(9)
+                const portesConc = voiture.map(item => item.voiture);
+                setPortesConcordia(portesConc)
             }
         } else {
-            setCombienVoitures(1)
+            setCombienVoitures(1);
         }
     }, [])
     

@@ -11,11 +11,7 @@ export default function Stations({ navigation }) {
     const { ligneChoisie, direction, envers, setEnvers, setDestination } = useContext(MetroContexte);
 
     useEffect(() => {
-        if (direction === donneesLigne.terminus[0]) {
-            setEnvers(true);
-        } else {
-            setEnvers(false);
-        }
+        setEnvers(direction === donneesLigne.terminus[0]);
     }, [])
 
     const donneesLigne = toutesLignes.find(ligne => ligne.ligne === ligneChoisie);

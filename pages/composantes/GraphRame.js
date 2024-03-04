@@ -10,14 +10,7 @@ export default function GraphRame({ combienVoitures, envers, infoLigne, portesCo
     const { destination } = useContext(MetroContexte);
 
     let acces = infoLigne.ascenseur.find((station) => Object.keys(station)[0] === destination);
-    let sortieAcces = [0, 0];
-    if (acces !== undefined) {
-        if (envers) {
-            sortieAcces = Object.values(acces)[0][1];
-        } else {
-            sortieAcces = Object.values(acces)[0][0];
-        } 
-    }
+    let sortieAcces = acces !== undefined ? (envers ? Object.values(acces)[0][1] : Object.values(acces)[0][0]) : undefined;
     
     return (
         <View style={styles.graph}>

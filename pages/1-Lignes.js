@@ -13,7 +13,7 @@ export default function Lignes({ navigation }) {
     const versPage2 = (ligne, terminus) => {
         setLigneChoisie(ligne.ligne);
         setDirection(terminus);
-        navigation.navigate("Stations")
+        navigation.navigate("Stations");
     }
 
     return (
